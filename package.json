@@ -1,0 +1,24 @@
+{
+  "name": "tooling",
+  "version": "1.0.0",
+  "description": "hometask",
+  "main": "bundle.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "serv": "static build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brok0/hometask.git"
+  },
+  "author": "Boris Hlynsky",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/brok0/hometask/issues"
+  },
+  "homepage": "https://github.com/brok0/hometask#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0"
+  }
+}

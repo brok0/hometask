@@ -1,8 +1,9 @@
 "use strict";
-
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 module.exports = {
   mode: "development",
-  entry: "./index",
+  entry: "./index.html",
   output: {
     filename: "bundle.js",
   },
@@ -18,4 +19,5 @@ module.exports = {
       },
     ],
   },
+  plugins: [new HtmlWebpackPlugin({ template: "./index.html" })],
 };
