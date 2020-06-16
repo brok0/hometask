@@ -1,21 +1,21 @@
 import React from "react";
 
 function Table({ columns, data, tableDescriptor }) {
-  const CheckForData = (data) => {
-    let check = false;
-    if (Array.isArray(data) && data) {
+  var rows = document.querySelectorAll("#table tbody tr").length;
+  const isEmpty = () => {
+    let check;
+    if (rows > 0) {
       check = true;
     } else {
       check = false;
+      alert("The page is empty");
     }
     return check;
   };
-  const DeleteRow = () => {
-    document.getElementById("table").DeleteRow();
-  };
+
   return (
     <div>
-      <table id="table" hidden={CheckForData()} className="table table-dark">
+      <table id="table" className="table table-dark">
         <thead>
           <tr>
             <th scope="col">{tableDescriptor}</th>
@@ -49,10 +49,6 @@ function Table({ columns, data, tableDescriptor }) {
           ))}
         </tbody>
       </table>
-      <h3 id="err" hidden={!CheckForData()}>
-        {" "}
-        There is no data
-      </h3>
     </div>
   );
 }
